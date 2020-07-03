@@ -27,32 +27,59 @@ namespace St_Vincent_De_Paul_Society
             this.Hide();
 
             //Declaring a variable for LoginForm
-            LogInForm f1 = new LogInForm();
+            LogInForm form1 = new LogInForm();
 
-            //Showing WelcomeForm
-            f1.ShowDialog();
+            //Showing LoginForm
+            form1.ShowDialog();
         }
 
         private void UploadButton_Click(object sender, EventArgs e)
         {
 
             this.Hide();
-            //Declaring a variable for LoginForm
-            UploadForm f3 = new UploadForm();
-           
-            //Showing WelcomeForm
-            f3.ShowDialog();
+            //Declaring a variable for UploadForm
+            UploadForm form3 = new UploadForm();
+            form3.isModifyOrDeleteSet = false;
+            form3.isUploadSet = true;
+            //Showing UploadForm
+            form3.ShowDialog();
 
         }
 
         private void ModifyButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //Declaring a variable for LoginForm
-            ModifyScreen f4 = new ModifyScreen();
-
+            //Declaring a variable for ModifyForm
+            ModifyScreen form4 = new ModifyScreen();
+            form4.setIsDelete = false;
+            form4.setIsModify = true;
             //Showing ModifyScreen
-            f4.ShowDialog();
+            form4.ShowDialog();
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //Declaring a variable for ModifyForm
+            ModifyScreen form4 = new ModifyScreen();
+            form4.setIsDelete = true;
+            form4.setIsModify = false;
+            //Showing ModifyScreen
+            form4.ShowDialog();
+
+        }
+
+        // To display HTML manual on application
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "OnlineHelp_VincentsOnlineStoreManager.chm");
+        }
+
+
+        // Closing the application if form gets closed
+        private void WelcomeForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

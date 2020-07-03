@@ -38,19 +38,24 @@
             this.ProductLocationModifyFormLabel = new System.Windows.Forms.Label();
             this.ProductLocationModifyFormComboBox = new System.Windows.Forms.ComboBox();
             this.ChooseProductsModifyScreenLabel = new System.Windows.Forms.Label();
-            this.ChooseProductsModifyScreenListBox = new System.Windows.Forms.ListBox();
             this.ModifyButton = new System.Windows.Forms.Button();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.ProductDisplayDataGridView = new System.Windows.Forms.DataGridView();
+            this.OutOfStockButton = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ShopLogoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDisplayDataGridView)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ShopLogoPictureBox
             // 
             this.ShopLogoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ShopLogoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ShopLogoPictureBox.Image")));
-            this.ShopLogoPictureBox.Location = new System.Drawing.Point(322, 8);
-            this.ShopLogoPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShopLogoPictureBox.Location = new System.Drawing.Point(337, 59);
+            this.ShopLogoPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.ShopLogoPictureBox.Name = "ShopLogoPictureBox";
             this.ShopLogoPictureBox.Size = new System.Drawing.Size(218, 53);
             this.ShopLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -63,12 +68,12 @@
             this.LogOutButton.BackColor = System.Drawing.Color.DarkBlue;
             this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.ForeColor = System.Drawing.Color.White;
-            this.LogOutButton.Location = new System.Drawing.Point(676, 8);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LogOutButton.Location = new System.Drawing.Point(691, 59);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(2);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(65, 28);
-            this.LogOutButton.TabIndex = 5;
-            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.TabIndex = 6;
+            this.LogOutButton.Text = "&Log Out";
             this.toolTip1.SetToolTip(this.LogOutButton, "Click here to Log out");
             this.LogOutButton.UseVisualStyleBackColor = false;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
@@ -79,12 +84,12 @@
             this.BackButton.BackColor = System.Drawing.Color.DarkBlue;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.Location = new System.Drawing.Point(676, 51);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackButton.Location = new System.Drawing.Point(691, 102);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(65, 28);
-            this.BackButton.TabIndex = 6;
-            this.BackButton.Text = "Back";
+            this.BackButton.TabIndex = 7;
+            this.BackButton.Text = "&Back";
             this.toolTip1.SetToolTip(this.BackButton, "Click here to go back");
             this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
@@ -93,7 +98,7 @@
             // 
             this.ProductCategoryLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ProductCategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductCategoryLabel.Location = new System.Drawing.Point(126, 101);
+            this.ProductCategoryLabel.Location = new System.Drawing.Point(141, 152);
             this.ProductCategoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProductCategoryLabel.Name = "ProductCategoryLabel";
             this.ProductCategoryLabel.Size = new System.Drawing.Size(263, 29);
@@ -104,18 +109,19 @@
             // 
             this.ProductCategoryComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ProductCategoryComboBox.FormattingEnabled = true;
-            this.ProductCategoryComboBox.Location = new System.Drawing.Point(126, 132);
-            this.ProductCategoryComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductCategoryComboBox.Location = new System.Drawing.Point(141, 183);
+            this.ProductCategoryComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.ProductCategoryComboBox.Name = "ProductCategoryComboBox";
             this.ProductCategoryComboBox.Size = new System.Drawing.Size(169, 21);
-            this.ProductCategoryComboBox.TabIndex = 8;
+            this.ProductCategoryComboBox.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.ProductCategoryComboBox, "Please select a Category you want to delete/modify");
             this.ProductCategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.ProductCategoryComboBox_SelectedIndexChanged);
             // 
             // ProductLocationModifyFormLabel
             // 
             this.ProductLocationModifyFormLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ProductLocationModifyFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductLocationModifyFormLabel.Location = new System.Drawing.Point(123, 217);
+            this.ProductLocationModifyFormLabel.Location = new System.Drawing.Point(138, 268);
             this.ProductLocationModifyFormLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProductLocationModifyFormLabel.Name = "ProductLocationModifyFormLabel";
             this.ProductLocationModifyFormLabel.Size = new System.Drawing.Size(267, 29);
@@ -127,74 +133,119 @@
             this.ProductLocationModifyFormComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ProductLocationModifyFormComboBox.Enabled = false;
             this.ProductLocationModifyFormComboBox.FormattingEnabled = true;
-            this.ProductLocationModifyFormComboBox.Location = new System.Drawing.Point(126, 248);
-            this.ProductLocationModifyFormComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProductLocationModifyFormComboBox.Location = new System.Drawing.Point(141, 299);
+            this.ProductLocationModifyFormComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.ProductLocationModifyFormComboBox.Name = "ProductLocationModifyFormComboBox";
             this.ProductLocationModifyFormComboBox.Size = new System.Drawing.Size(169, 21);
-            this.ProductLocationModifyFormComboBox.TabIndex = 10;
+            this.ProductLocationModifyFormComboBox.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.ProductLocationModifyFormComboBox, "Please select a Location you want to delete/modify");
             this.ProductLocationModifyFormComboBox.SelectedIndexChanged += new System.EventHandler(this.ProductLocationModifyFormComboBox_SelectedIndexChanged);
             // 
             // ChooseProductsModifyScreenLabel
             // 
             this.ChooseProductsModifyScreenLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ChooseProductsModifyScreenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChooseProductsModifyScreenLabel.Location = new System.Drawing.Point(370, 101);
+            this.ChooseProductsModifyScreenLabel.Location = new System.Drawing.Point(497, 152);
             this.ChooseProductsModifyScreenLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ChooseProductsModifyScreenLabel.Name = "ChooseProductsModifyScreenLabel";
             this.ChooseProductsModifyScreenLabel.Size = new System.Drawing.Size(237, 29);
             this.ChooseProductsModifyScreenLabel.TabIndex = 11;
             this.ChooseProductsModifyScreenLabel.Text = "Choose from products below:";
             // 
-            // ChooseProductsModifyScreenListBox
-            // 
-            this.ChooseProductsModifyScreenListBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ChooseProductsModifyScreenListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChooseProductsModifyScreenListBox.FormattingEnabled = true;
-            this.ChooseProductsModifyScreenListBox.ItemHeight = 16;
-            this.ChooseProductsModifyScreenListBox.Location = new System.Drawing.Point(373, 162);
-            this.ChooseProductsModifyScreenListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ChooseProductsModifyScreenListBox.Name = "ChooseProductsModifyScreenListBox";
-            this.ChooseProductsModifyScreenListBox.Size = new System.Drawing.Size(369, 100);
-            this.ChooseProductsModifyScreenListBox.TabIndex = 12;
-            // 
             // ModifyButton
             // 
             this.ModifyButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ModifyButton.BackColor = System.Drawing.Color.DarkBlue;
+            this.ModifyButton.Enabled = false;
             this.ModifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModifyButton.ForeColor = System.Drawing.Color.White;
-            this.ModifyButton.Location = new System.Drawing.Point(676, 310);
-            this.ModifyButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ModifyButton.Location = new System.Drawing.Point(566, 361);
+            this.ModifyButton.Margin = new System.Windows.Forms.Padding(2);
             this.ModifyButton.Name = "ModifyButton";
             this.ModifyButton.Size = new System.Drawing.Size(65, 28);
-            this.ModifyButton.TabIndex = 13;
-            this.ModifyButton.Text = "Modify";
+            this.ModifyButton.TabIndex = 4;
+            this.ModifyButton.Text = "&Modify";
             this.toolTip1.SetToolTip(this.ModifyButton, "Click here to Modify");
             this.ModifyButton.UseVisualStyleBackColor = false;
             this.ModifyButton.Click += new System.EventHandler(this.ModifyButton_Click);
             // 
-            // SearchTextBox
+            // DeleteButton
             // 
-            this.SearchTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.SearchTextBox.Location = new System.Drawing.Point(373, 132);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(168, 20);
-            this.SearchTextBox.TabIndex = 14;
-            this.SearchTextBox.Text = "Type anything to search";
-            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
-            this.SearchTextBox.Enter += new System.EventHandler(this.SearchTextBox_Enter);
-            this.SearchTextBox.Leave += new System.EventHandler(this.SearchTextBox_Leave);
+            this.DeleteButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.DeleteButton.BackColor = System.Drawing.Color.DarkBlue;
+            this.DeleteButton.Enabled = false;
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteButton.Location = new System.Drawing.Point(389, 361);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(2);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(149, 28);
+            this.DeleteButton.TabIndex = 3;
+            this.DeleteButton.Text = "&Delete (Other Reasons)";
+            this.toolTip1.SetToolTip(this.DeleteButton, "Click here to Modify");
+            this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Visible = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // ProductDisplayDataGridView
+            // 
+            this.ProductDisplayDataGridView.AllowUserToAddRows = false;
+            this.ProductDisplayDataGridView.AllowUserToDeleteRows = false;
+            this.ProductDisplayDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ProductDisplayDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductDisplayDataGridView.Location = new System.Drawing.Point(389, 183);
+            this.ProductDisplayDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.ProductDisplayDataGridView.Name = "ProductDisplayDataGridView";
+            this.ProductDisplayDataGridView.RowHeadersWidth = 62;
+            this.ProductDisplayDataGridView.RowTemplate.Height = 28;
+            this.ProductDisplayDataGridView.Size = new System.Drawing.Size(403, 153);
+            this.ProductDisplayDataGridView.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.ProductDisplayDataGridView, "Select the product from the list to proceed");
+            this.ProductDisplayDataGridView.SelectionChanged += new System.EventHandler(this.ProductDisplayDataGridView_SelectionChanged);
+            // 
+            // OutOfStockButton
+            // 
+            this.OutOfStockButton.BackColor = System.Drawing.Color.DarkBlue;
+            this.OutOfStockButton.Enabled = false;
+            this.OutOfStockButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.OutOfStockButton.ForeColor = System.Drawing.Color.White;
+            this.OutOfStockButton.Location = new System.Drawing.Point(668, 361);
+            this.OutOfStockButton.Name = "OutOfStockButton";
+            this.OutOfStockButton.Size = new System.Drawing.Size(110, 28);
+            this.OutOfStockButton.TabIndex = 5;
+            this.OutOfStockButton.Text = "&Delete (Sold)";
+            this.toolTip1.SetToolTip(this.OutOfStockButton, "Click here to mark an item as out of stock on website");
+            this.OutOfStockButton.UseVisualStyleBackColor = false;
+            this.OutOfStockButton.Click += new System.EventHandler(this.OutOfStockButton_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(841, 24);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // ModifyScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(863, 487);
-            this.Controls.Add(this.SearchTextBox);
+            this.ClientSize = new System.Drawing.Size(841, 487);
+            this.Controls.Add(this.OutOfStockButton);
+            this.Controls.Add(this.ProductDisplayDataGridView);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.ModifyButton);
-            this.Controls.Add(this.ChooseProductsModifyScreenListBox);
             this.Controls.Add(this.ChooseProductsModifyScreenLabel);
             this.Controls.Add(this.ProductLocationModifyFormComboBox);
             this.Controls.Add(this.ProductLocationModifyFormLabel);
@@ -203,13 +254,20 @@
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.ShopLogoPictureBox);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ModifyScreen";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 13);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to the modify screen";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModifyScreen_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModifyScreen_FormClosing_1);
+            this.Load += new System.EventHandler(this.ModifyScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ShopLogoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDisplayDataGridView)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,9 +283,12 @@
         private System.Windows.Forms.Label ProductLocationModifyFormLabel;
         private System.Windows.Forms.ComboBox ProductLocationModifyFormComboBox;
         private System.Windows.Forms.Label ChooseProductsModifyScreenLabel;
-        private System.Windows.Forms.ListBox ChooseProductsModifyScreenListBox;
         private System.Windows.Forms.Button ModifyButton;
-        private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.DataGridView ProductDisplayDataGridView;
+        private System.Windows.Forms.Button OutOfStockButton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }

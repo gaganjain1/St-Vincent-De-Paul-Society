@@ -13,8 +13,9 @@ namespace St_Vincent_De_Paul_Society
     public partial class LogInForm : Form
     {
 
+        // Declaring variables globally
         const string PASSWORD = "vincent";
-        int passwordCount = 4;
+        int passwordCount = 3; // variable used to check no of remaining attempts for entering correct password
 
         public LogInForm()
         {
@@ -23,11 +24,18 @@ namespace St_Vincent_De_Paul_Society
             PasswordTextBox.PasswordChar = '*';
         }
 
+        private void LogInForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // Functionality on clicking LogInButton
         private void LogInButton_Click(object sender, EventArgs e)
         {
             if (PasswordTextBox.Text == "")
             {
-                MessageBox.Show("Please enter the password and try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter the password and try again", "Password needed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -35,14 +43,14 @@ namespace St_Vincent_De_Paul_Society
 
             {
 
-               
+
                 this.Hide();
 
                 //Declaring a variable for WelcomeForm
-                WelcomeForm f2 = new WelcomeForm();
+                WelcomeForm form2 = new WelcomeForm();
 
                 //Showing WelcomeForm
-                f2.ShowDialog();
+                form2.ShowDialog();
 
 
             }
@@ -60,7 +68,7 @@ namespace St_Vincent_De_Paul_Society
             else
             {
 
-                // if the user enters an incorrect password 4 times, this message box will appear
+                // if the user enters an incorrect password 3 times, this message box will appear
                 MessageBox.Show(" Sorry! You have entered an incorrect password.\r\n You are blocked as no chances are left. \r\n Please try again after sometime.", "Blocked", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                 // Application will close
@@ -68,12 +76,13 @@ namespace St_Vincent_De_Paul_Society
 
             }
 
-            
-        }
-
-        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
-        {
 
         }
+
+
+
+       
+
+
     }
 }

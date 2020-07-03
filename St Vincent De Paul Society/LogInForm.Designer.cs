@@ -45,9 +45,10 @@
             // 
             this.ShopLogoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ShopLogoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ShopLogoPictureBox.Image")));
-            this.ShopLogoPictureBox.Location = new System.Drawing.Point(465, 12);
+            this.ShopLogoPictureBox.Location = new System.Drawing.Point(310, 8);
+            this.ShopLogoPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.ShopLogoPictureBox.Name = "ShopLogoPictureBox";
-            this.ShopLogoPictureBox.Size = new System.Drawing.Size(327, 81);
+            this.ShopLogoPictureBox.Size = new System.Drawing.Size(218, 53);
             this.ShopLogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ShopLogoPictureBox.TabIndex = 0;
             this.ShopLogoPictureBox.TabStop = false;
@@ -56,9 +57,10 @@
             // 
             this.ThemePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ThemePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ThemePictureBox.Image")));
-            this.ThemePictureBox.Location = new System.Drawing.Point(54, 345);
+            this.ThemePictureBox.Location = new System.Drawing.Point(36, 224);
+            this.ThemePictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.ThemePictureBox.Name = "ThemePictureBox";
-            this.ThemePictureBox.Size = new System.Drawing.Size(303, 340);
+            this.ThemePictureBox.Size = new System.Drawing.Size(202, 221);
             this.ThemePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ThemePictureBox.TabIndex = 2;
             this.ThemePictureBox.TabStop = false;
@@ -72,9 +74,10 @@
             this.PasswordPanel.Controls.Add(this.PasswordTextBox);
             this.PasswordPanel.Controls.Add(this.PasswordLabel);
             this.PasswordPanel.Controls.Add(this.EmployeeLogInLabel);
-            this.PasswordPanel.Location = new System.Drawing.Point(390, 168);
+            this.PasswordPanel.Location = new System.Drawing.Point(260, 109);
+            this.PasswordPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordPanel.Name = "PasswordPanel";
-            this.PasswordPanel.Size = new System.Drawing.Size(474, 238);
+            this.PasswordPanel.Size = new System.Drawing.Size(317, 155);
             this.PasswordPanel.TabIndex = 3;
             // 
             // LogInButton
@@ -82,54 +85,60 @@
             this.LogInButton.BackColor = System.Drawing.Color.DarkBlue;
             this.LogInButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogInButton.ForeColor = System.Drawing.Color.White;
-            this.LogInButton.Location = new System.Drawing.Point(231, 141);
+            this.LogInButton.Location = new System.Drawing.Point(154, 92);
+            this.LogInButton.Margin = new System.Windows.Forms.Padding(2);
             this.LogInButton.Name = "LogInButton";
-            this.LogInButton.Size = new System.Drawing.Size(98, 43);
-            this.LogInButton.TabIndex = 3;
-            this.LogInButton.Text = "Log In";
+            this.LogInButton.Size = new System.Drawing.Size(65, 28);
+            this.LogInButton.TabIndex = 2;
+            this.LogInButton.Text = "&Log In";
             this.LogInButton.UseVisualStyleBackColor = false;
             this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(231, 81);
+            this.PasswordTextBox.Location = new System.Drawing.Point(154, 53);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(170, 26);
-            this.PasswordTextBox.TabIndex = 2;
-            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
+            this.PasswordTextBox.Size = new System.Drawing.Size(115, 20);
+            this.PasswordTextBox.TabIndex = 1;
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.Location = new System.Drawing.Point(50, 80);
+            this.PasswordLabel.Location = new System.Drawing.Point(33, 52);
+            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(175, 44);
+            this.PasswordLabel.Size = new System.Drawing.Size(117, 29);
             this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.Text = "Password :";
             // 
             // EmployeeLogInLabel
             // 
             this.EmployeeLogInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeLogInLabel.Location = new System.Drawing.Point(154, 23);
+            this.EmployeeLogInLabel.Location = new System.Drawing.Point(103, 15);
+            this.EmployeeLogInLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmployeeLogInLabel.Name = "EmployeeLogInLabel";
-            this.EmployeeLogInLabel.Size = new System.Drawing.Size(209, 44);
+            this.EmployeeLogInLabel.Size = new System.Drawing.Size(139, 29);
             this.EmployeeLogInLabel.TabIndex = 0;
             this.EmployeeLogInLabel.Text = "Employee Log In";
             // 
             // LogInForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1295, 773);
+            this.ClientSize = new System.Drawing.Size(856, 502);
             this.Controls.Add(this.PasswordPanel);
             this.Controls.Add(this.ThemePictureBox);
             this.Controls.Add(this.ShopLogoPictureBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Management for Website";
+            this.Load += new System.EventHandler(this.LogInForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ShopLogoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThemePictureBox)).EndInit();
             this.PasswordPanel.ResumeLayout(false);
